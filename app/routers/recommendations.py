@@ -1,7 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from typing import List
-from ..crud import get_recommendations
-from ..schemas import LocationCategoryReviewed
+from app.controllers.reviewed_controller import get_recommendations
+from app.validators.schemas import LocationCategoryReviewed
 
 router = APIRouter(prefix="/recommendations", tags=["recommendations"])
 

@@ -1,5 +1,5 @@
 from sqlalchemy import Table, Column, Integer, String, Float, ForeignKey, DateTime, func
-from .database import metadata
+from app.database.database import metadata
 
 locations = Table(
     "locations",
