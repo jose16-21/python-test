@@ -1,7 +1,6 @@
-from fastapi import APIRouter, HTTPException
-from typing import List
-from ..crud import create_location
-from ..schemas import LocationCreate, Location
+from fastapi import APIRouter
+from app.controllers.locations_controller import create_location
+from app.validators.schemas import LocationCreate, Location
 
 router = APIRouter(prefix="/locations", tags=["locations"])
 

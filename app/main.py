@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .database import database, engine, metadata
-from .routers import locations, categories, recommendations
+from app.database.database import database, engine, metadata
+from app.routers import locations, categories, recommendations
 
 metadata.create_all(engine)
 
