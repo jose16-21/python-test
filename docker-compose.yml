@@ -7,5 +7,17 @@ services:
       - "8000:80"
     volumes:
       - .:/app
-    command: >
-      sh -c "uvicorn main:app --host 0.0.0.0 --port 80 --reload"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=mysql+pymysql://user:password@db/map_my_world
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: map_my_world
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
