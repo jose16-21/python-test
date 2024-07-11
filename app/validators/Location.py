@@ -4,6 +4,8 @@ from pydantic import BaseModel
 class LocationBase(BaseModel):
     latitude: float
     longitude: float
+    name: str
+    description: str
 
 
 class LocationCreate(LocationBase):
