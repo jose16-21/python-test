@@ -1,4 +1,4 @@
-from app.validators.schemas import CategoryCreate
+from app.validators.Category import CategoryCreate
 from app.repositories.category_repository import store
 
 

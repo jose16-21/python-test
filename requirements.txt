@@ -1,7 +1,8 @@
-fastapi
+fastapi~=0.111.0
 uvicorn
-sqlalchemy
-databases
+sqlalchemy~=2.0.31
+databases~=0.9.0
 pymysql
 aiomysql
 cryptography
+pydantic~=2.8.2

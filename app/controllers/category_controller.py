@@ -1,5 +1,5 @@
 from app.managers.category_manager import storeCategory
-from app.validators.schemas import CategoryCreate
+from app.validators.Category import CategoryCreate
 
 
 async def store(category: CategoryCreate):

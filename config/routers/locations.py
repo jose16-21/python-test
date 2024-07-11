@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.controllers.locations_controller import store
-from app.validators.schemas import LocationCreate, Location
+from app.validators.Location import LocationCreate, Location
 
 router = APIRouter(prefix="/locations", tags=["locations"])
 

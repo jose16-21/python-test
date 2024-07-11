@@ -1,6 +1,6 @@
 from app.database.database import database
-from app.file_models import categories
-from app.validators.schemas import CategoryCreate
+from app.models.file_models import categories
+from app.validators.Category import CategoryCreate
 
 
 async def store(category: CategoryCreate):
