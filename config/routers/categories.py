@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.controllers.category_controller import store
-from app.validators.schemas import CategoryCreate, Category
+from app.validators.Category import CategoryCreate, Category
 
 router = APIRouter(prefix="/categories", tags=["categories"])
 

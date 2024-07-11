@@ -24,3 +24,13 @@ location_category_reviewed = Table(
     Column("category_id", Integer, ForeignKey("categories.id"), nullable=False),
     Column("reviewed_at", DateTime, default=func.now(), nullable=False),
 )
+
+recommendations = Table(
+    "recommendations",
+    metadata,
+    Column("id", Integer, primary_key=True, index=True),
+    Column("location_id", Integer, ForeignKey("locations.id"), nullable=False),
+    Column("category_id", Integer, ForeignKey("categories.id"), nullable=False),
+    Column("score", Float, nullable=False),
+    Column("recommended_at", DateTime, default=func.now(), nullable=False),
+)

@@ -1,6 +1,6 @@
 from app.database.database import database
-from app.file_models import locations
-from app.validators.schemas import LocationCreate
+from app.models.file_models import locations
+from app.validators.Location import LocationCreate
 
 
 async def store(location: LocationCreate):
