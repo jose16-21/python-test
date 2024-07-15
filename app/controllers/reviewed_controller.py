@@ -1,11 +1,11 @@
 from sqlalchemy import select
 from app.database.database import database
-from app.models.file_models import location_category_reviewed
+from app.models.file_models import reviews
 from app.validators.schemas import LocationCategoryReviewedCreate
 
 
 async def create_location_category_reviewed(review: LocationCategoryReviewedCreate):
-    query = location_category_reviewed.insert().values(
+    query = reviews.insert().values(
         location_id=review.location_id,
         category_id=review.category_id
     )
@@ -15,7 +15,7 @@ async def create_location_category_reviewed(review: LocationCategoryReviewedCrea
 
 async def get_recommendations():
     query = select([
-        location_category_reviewed.c.location_id,
-        location_category_reviewed.c.category_id
-    ]).order_by(location_category_reviewed.c.reviewed_at)
+        reviews.c.location_id,
+        reviews.c.category_id
+    ]).order_by(reviews.c.reviewed_at)
     return await database.fetch_all(query)

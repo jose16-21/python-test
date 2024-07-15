@@ -6,7 +6,6 @@ class RecommendationBase(BaseModel):
     location_id: int
     category_id: int
     score: float
-    recommended_at: datetime
 
 
 class RecommendationCreate(RecommendationBase):
